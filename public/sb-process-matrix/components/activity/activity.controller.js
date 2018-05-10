@@ -24,10 +24,6 @@ class ActivityController {
         this.data.progress = this.data.lastProgress;
       });
   }
-
-  resetProgress(activity) {
-    activity.progress = lastChangedProgress;
-  }
 }
 
 export { ActivityController }
