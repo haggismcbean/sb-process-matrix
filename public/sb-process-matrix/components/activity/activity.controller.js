@@ -3,8 +3,7 @@
  */
 class ActivityController {
 
-  constructor (sbDeliverables) {
-    this.sbDeliverables = sbDeliverables;
+  constructor () {
   }
 
   /**
@@ -24,7 +23,5 @@ class ActivityController {
     activity.progress = lastChangedProgress;
   }
 }
-
-ActivityController.$inject = ['sbDeliverables'];
 
 export { ActivityController }
