@@ -2,15 +2,18 @@
 
   <md-card-title class="less-blue">
     <div layout="column">
-      <h3>Material Design process visualization ...</h3>
-      <p>Content: 50 deliverables all having the same process with 8 steps</p>
+      <h3>Process Viewer - Sablono Mockup</h3>
     </div>
   </md-card-title>
 
-  <md-card-content layout="row" layout-align="space-between">
+  <md-card-content>
 
-    <div ng-repeat="deliverable in $ctrl.sbModel">
-       :: ->> {{deliverable.name}}
+    <div ng-repeat="deliverable in $ctrl.sbModel" class="deliverable" layout="row" layout-align="space-between">
+      {{deliverable.name}}
+
+      <div ng-repeat="activity in deliverable.activities">
+        <sb-activity data="activity"></sb-activity>
+      </div>
     </div>
 
   </md-card-content>
