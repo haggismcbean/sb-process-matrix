@@ -5,6 +5,7 @@ import {ActivityController} from './activity.controller.js'
 
 const bindings = {
   data: '<',
+  onProgressChange: '<'
 };
 
 export const activityComponent = {

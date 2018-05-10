@@ -3,8 +3,8 @@
  */
 class ActivityController {
 
-  constructor () {
-    console.log('Activity Controller is alive');
+  constructor (sbDeliverables) {
+    this.sbDeliverables = sbDeliverables;
   }
 
   /**
@@ -13,8 +13,18 @@ class ActivityController {
    * @return {undefined} undefined
    */
   $onInit () {
-    console.log('input bindings are defined!', this.data);
+    this.data.lastProgress = this.data.progress
+  }
+
+  onChange() {
+    this.onProgressChange(this.data);
+  }
+
+  resetProgress(activity) {
+    activity.progress = lastChangedProgress;
   }
 }
+
+ActivityController.$inject = ['sbDeliverables'];
 
 export { ActivityController }

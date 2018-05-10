@@ -14,7 +14,7 @@
       </div>
 
       <div ng-repeat="activity in deliverable.activities | orderBy:'-step'">
-        <sb-activity data="activity"></sb-activity>
+        <sb-activity data="activity" on-progress-change="$ctrl.progressChange"></sb-activity>
       </div>
     </div>
 
