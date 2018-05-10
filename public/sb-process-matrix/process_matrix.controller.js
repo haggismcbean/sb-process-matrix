@@ -21,12 +21,6 @@ class ProcessMatrixController {
     return function(activity) {
       return this.sbDeliverables
         .changeTaskProgress(activity, activity.progress)
-        .then( response => {
-          console.log('response');
-        })
-        .catch( response => {
-          //todo - reset progress
-        });
       }.bind(this)
   }
 }

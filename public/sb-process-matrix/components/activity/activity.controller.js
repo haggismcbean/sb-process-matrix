@@ -16,7 +16,13 @@ class ActivityController {
   }
 
   onChange() {
-    this.onProgressChange(this.data);
+    this.onProgressChange(this.data)
+      .then((response) => {
+        this.data.lastProgress = this.data.progress;
+      })
+      .catch((error) => {
+        this.data.progress = this.data.lastProgress;
+      });
   }
 
   resetProgress(activity) {

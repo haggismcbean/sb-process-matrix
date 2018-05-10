@@ -3,9 +3,12 @@
     height: 80px;
     color: #fff;
     padding: 20px;
-    font-size: 14px;
-    margin: 20px;
+    font-size: 13px;
+    margin: 10px;
     text-transform: capitalize;
+    position: relative;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.41);
+
 }
 
 .completed {
@@ -18,4 +21,19 @@
 
 .todo {
     background-color: red;
+}
+
+
+
+.progress-selector {
+    font-size: 12px;
+    background-color: #fff;
+    color: #222;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+    md-input-container {
+        margin: 0;
+    }
 }
