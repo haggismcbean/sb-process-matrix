@@ -1,1 +1,13 @@
-<div>It works!</div>
+<div class="activity" ng-class="{completed: vm.data.progress === 0, 'in-progress': vm.data.progress === 50, todo: vm.data.progress === 100}">
+    {{vm.data.name}}
+
+    <div class="progress-selector">
+        <md-input-container>
+          <md-select ng-model="vm.data.progress" placeholder="Select a state">
+            <md-option ng-value="100">Completed</md-option>
+            <md-option ng-value="50">In Progress</md-option>
+            <md-option ng-value="0">To Do</md-option>
+          </md-select>
+        </md-input-container>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 <md-card>
 
   <md-card-title class="less-blue">
-    <div layout="column">
+    <div layout="column" layout-align="center">
       <h3>Process Viewer - Sablono Mockup</h3>
     </div>
   </md-card-title>
@@ -9,9 +9,11 @@
   <md-card-content>
 
     <div ng-repeat="deliverable in $ctrl.sbModel" class="deliverable" layout="row" layout-align="space-between">
-      {{deliverable.name}}
+      <div class="name">
+        {{deliverable.name}}
+      </div>
 
-      <div ng-repeat="activity in deliverable.activities">
+      <div ng-repeat="activity in deliverable.activities | orderBy:'-step'">
         <sb-activity data="activity"></sb-activity>
       </div>
     </div>

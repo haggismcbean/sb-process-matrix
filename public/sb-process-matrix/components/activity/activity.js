@@ -8,6 +8,7 @@ const bindings = {
 };
 
 export const activityComponent = {
+  controllerAs: 'vm',
   controller: ActivityController,
   template: componentTemplate,
   bindings: bindings
